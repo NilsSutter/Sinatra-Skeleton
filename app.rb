@@ -1,8 +1,13 @@
 require "sinatra"
 require 'sinatra/activerecord'
+# <-- REQUIRE MODELS HERE -->
 
-class App < Sinatra::Base
+# render html.erb extensions
+Tilt.register Tilt::ERBTemplate, 'html.erb'
+
+# routes & controller actions -> handle requests & responses here
+class ApplicationController < Sinatra::Base
   get "/" do
-    "Hello there"
+    # do something
   end
 end

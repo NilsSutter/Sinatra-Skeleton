@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: exampl # change to project name
+  database: example # change to project name
   pool: 2
   username: <%= ENV["username"] %> # username of local machine
   password: <%= ENV["password"] %> # password of local machine
