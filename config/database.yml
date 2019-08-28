@@ -1,15 +1,16 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: exampl
+  database: exampl # change to project name
   pool: 2
-  username: <%= ENV["username"] %>
-  password: <%= ENV["password"] %>
+  username: <%= ENV["username"] %> # username of local machine
+  password: <%= ENV["password"] %> # password of local machine
 
 production:
   adapter: postgresql
   encoding: unicode
   pool: 5
+  # the following 4 env variables will be provided by heroku in case of deployment
   host: <%= ENV['DATABASE_HOST'] %>
   database: <%= ENV['DATABASE_NAME'] %>
   username: <%= ENV['DATABASE_USER'] %>
