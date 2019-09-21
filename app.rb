@@ -1,8 +1,8 @@
 require "sinatra"
 require 'sinatra/activerecord'
 require 'json'
-require_relative 'models/language'
 # <-- REQUIRE MODELS HERE -->
+require_relative 'models/language'
 
 # routes & controller actions
 class ApplicationController < Sinatra::Base

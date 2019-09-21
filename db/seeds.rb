@@ -1,10 +1,8 @@
-require 'faker'
 require_relative '../models/language'
 
-5.times do
-  Language.create(
-    name: Faker::ProgrammingLanguage.name,
-    creator: Faker::ProgrammingLanguage.creator,
-    year: 1900
-  )
-end
+languages = [
+  {name: "Ruby", creator: "Yukihiro Matsumoto", year: 1995},
+  {name: "Kotlin", creator:"JetBrains", year: 2011}
+]
+
+languages.each { |x| Language.create(x) }
