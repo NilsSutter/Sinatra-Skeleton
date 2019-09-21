@@ -1,12 +1,13 @@
 require "sinatra"
 require 'sinatra/activerecord'
+require 'json'
+require_relative 'models/language'
 # <-- REQUIRE MODELS HERE -->
-
-# Tilt.register Tilt::ERBTemplate, 'html.erb'  --> uncomment this line if you use html.erb extensions for your templates
 
 # routes & controller actions
 class ApplicationController < Sinatra::Base
   get "/" do
-    # do something
+    languages = Language.all
+    erb :index, locals: { languages: languages }
   end
 end
